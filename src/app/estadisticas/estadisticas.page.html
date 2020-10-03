@@ -1,0 +1,54 @@
+<ion-content id="body">
+	<ion-toolbar id="tools">
+		<ion-buttons slot="start">
+			<ion-menu-button menu="main-menu" slot="start"></ion-menu-button>
+    	</ion-buttons>
+    	<ion-title id="titulo">ANALISI PRESENZE</ion-title>
+    </ion-toolbar>
+    <div id="desplegable">
+    	<div (click)="abrir()" id="boton" style="--background: #771211; text-align: center; border: 1px solid white; width: 60%; height: 7.5% !important; margin: auto; border-radius: 2.5px;">
+    		<p style="margin: 5px;">ULTIME {{ estracciones }} ESTRAZIONI</p>
+    	</div>
+	    <ion-list class="ion-no-padding" id="estracciones" style="background: #771211; border: 1px solid white; border-radius: 0px; margin-top: 10px; display: none;margin: auto;left: 0px;right: 0px;">
+	      <ion-item (click)="calculos(50)" (click)="cerrar()" style="--background: #771211; --color: white; margin: 0; text-align: center;">ULTIME 50 ESTRAZIONI
+	      	<span slot="end" style="margin: 0;">
+	      		<ion-icon *ngIf="estracciones == 50" style="color: #0f0" name="checkmark-outline"></ion-icon>
+	      	</span>
+	      </ion-item>
+	      <ion-item (click)="calculos(100)" (click)="cerrar()" style="--background: #771211; --color: white; margin: 0; text-align: center;">ULTIME 100 ESTRAZIONI
+	      	<span slot="end" style="margin: 0;">
+	      		<ion-icon *ngIf="estracciones == 100" style="color: #0f0" name="checkmark-outline"></ion-icon>
+	      	</span>
+	      </ion-item>
+	    </ion-list>
+    </div>
+
+    <span id="side-left">ELENCO NUMERI</span>
+
+    <span style="margin: 16px 15%;display: block;">FRECUENZA DI USCITA</span>
+
+	<canvas style="width: 80%; margin: auto;" id="grafico"></canvas>
+
+</ion-content>
+
+<ion-footer>
+	<ion-tabs id="menufoot">
+	  <ion-tab-bar slot="bottom">
+	    <ion-tab-button routerLink="/frequenti" id="mb1">
+	      <!-- <ion-icon name="home"></ion-icon> -->
+	      <img src="../assets/piu-frecuenti.png" alt="" style="width: 24px;">
+	      <ion-label style="margin-top: 6px;">PIÜ FREQUENTI</ion-label>
+	    </ion-tab-button>
+
+	    <ion-tab-button routerLink="/retardati" id="mb2">
+	      <ion-icon src="../assets/bingo.svg"></ion-icon>
+	      <ion-label style="margin-top: 6px;">NUMERI RITARDATARI</ion-label>
+	    </ion-tab-button>
+
+	    <ion-tab-button routerLink="/estadisticas" id="mb3">
+	      <ion-icon src="../assets/statistics.svg"></ion-icon>
+	      <ion-label style="margin-top: 6px; border-bottom: 2px solid gold">ANALISI PRESENZE</ion-label>
+	    </ion-tab-button>
+	  </ion-tab-bar>
+	</ion-tabs>
+</ion-footer>

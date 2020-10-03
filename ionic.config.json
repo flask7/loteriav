@@ -1,0 +1,8 @@
+{
+  "name": "loteria",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

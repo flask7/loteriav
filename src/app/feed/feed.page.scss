@@ -1,0 +1,214 @@
+#tools{
+	--background: transparent;
+	--box-shadow: none;
+	--color: white;
+	--border-style: transparent;
+	box-shadow: none;
+	margin-left: 1.5%;
+}
+#body{
+	--background: #771211;
+}
+#menu{
+	background: #771211;
+	color: white;
+	width: 60%;
+	height: 100%;
+	animation-name: slide;
+	animation-duration: 200ms;
+	display: none;
+	z-index: 2;
+}
+@keyframes slide{
+	from{
+		width: 0%;
+	}
+	to{
+		width: 60%;
+	}
+}
+#tools p{
+	display: block;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    left: -28px;
+    width: 100%;
+    text-align: center;
+}
+#game{
+	text-align: center;
+	background: transparent;
+	height: 20%;
+	margin-top: -6px;
+}
+#imgm{
+	height: 30%;
+	width: 80%;
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	z-index: 0;
+}
+#imgp{
+	height: 30%;
+	width: 80%;
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	z-index: 2;
+}
+#fondo{
+	margin: auto;
+	height: 300px;
+	width: 300px;
+	z-index: 1;
+	
+}
+#game h5{
+	margin-top: 0%;
+	margin-bottom: 2.5%;
+	color: white;
+	text-align: center;
+	font-size: 14px;
+	font-family: 'geometos';
+}
+#horas, #minutos, #segundos{
+	height: 100%;
+	width: 100%;
+	background: #1A2739;
+	border: 2px solid black;
+	border-radius: 10px;
+	text-align: center;
+	display: inline-block;
+}
+#VINCICASA, a{
+	color: #FFF100;
+	-webkit-text-stroke: 1px black;
+	font-weight: bolder;
+	font-size: 120%;
+	--text-align: center;
+	font-family: 'sf ui display';
+}
+#tiempo{
+	width: 100%;
+}
+#tuto{
+	margin-top: 10%;
+}
+#hh1, #mh1, #sh1{
+	margin: 0;
+	position: relative;
+	top: 25%;
+	z-index: 2;
+	font-family: 'digital-7';
+	font-weight: bolder;
+}
+#mday{
+	color: #FFF100;
+	-webkit-text-stroke: 1px black;
+	text-align: center;
+	margin-top: 0%;
+	font-size: 175%;
+	font-family: 'sf ui display';
+}
+#chance{
+	margin-top: 15px;
+	color: white;
+	text-align: center;
+	font-size: 18px;
+	font-family: 'Hitchhiker';
+}
+#tuto{
+	margin-top: 0%;
+	width: 80%;
+	margin-left: 10%;
+	--background: white;
+	--color: #771211;
+	font-weight: bolder;
+	box-shadow: 0px 15px 15px #0898B5;
+  	margin-bottom: 7.5%;
+	border-radius: 80px;
+}
+
+#million, #fondo{
+  width: 300px;
+  z-index: 1;
+  margin: auto;
+  position: absolute;
+  top: 0;
+}
+#fondo {
+  width: 300px;
+  margin: auto;
+}
+#presentacion {
+  h2 {
+    width: 300px;
+    margin: auto;
+  }
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  background-image: url(/assets/aro-luz.png), url(/assets/monedas-2.png);
+  background-size: 300px 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+}
+@media only screen and(min-width: 350px){
+	#presentacion{
+		height: 350px;
+		width: 350px;
+		background-size: 350px 350px;
+	}
+	#million{
+		height: 350px;
+		width: 350px;
+	}
+}
+@media only screen and(min-width: 400px){
+	#presentacion{
+		height: 400px;
+		width: 400px;
+		background-size: 400px 400px;
+	}
+	#million{
+		height: 400px;
+		width: 400px;
+	}
+}
+@media only screen and(min-width: 750px){
+	#presentacion{
+		height: 550px;
+		width: 800px;
+		background-size: 550px 550px;
+	}
+	#million{
+		height: 550px;
+		width: 800px;
+	}
+	#mday{
+		font-size: 50px;
+	}
+	#chance{
+		font-size: 40px;
+	}
+}
+@media only screen and(min-width: 1000px){
+	#presentacion{
+		height: 800px;
+		width: 1000px;
+		background-size: 800px 800px;
+	}
+	#million{
+		height: 800px;
+		width: 1000px;
+	}
+	#mday{
+		font-size: 60px;
+	}
+	#chance{
+		font-size: 50px;
+	}
+}

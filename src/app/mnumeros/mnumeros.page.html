@@ -1,0 +1,119 @@
+<ion-content id="body">
+	<ion-header id="head">
+	  <ion-toolbar id="tools">
+	  	<ion-menu-button menu="main-menu" slot="start"></ion-menu-button>
+	  	<ion-title id="titulo">TEST DEI MIEI NUMERI</ion-title>
+	  </ion-toolbar>
+	</ion-header>
+	<div id="contenedor">
+		<ion-row id="fila">
+			<ion-col class="columna">
+				<div *ngFor="let numero of numeros" class="n1">
+					<input type="checkbox" name="" id="numero{{ numero }}" (change)="seleccionar($event, numero)">
+					<label for="numero{{ numero }}">
+						<b class="valores">
+							{{ numero }}
+						</b>
+					</label>
+				</div>
+			</ion-col>
+			<ion-col class="columna">
+				<div *ngFor="let numero of numeros2" class="n2">
+					<input type="checkbox" name="" id="numero{{ numero }}" (change)="seleccionar2($event, numero)">
+					<label for="numero{{ numero }}">
+						<b class="valores">
+							{{ numero }}
+						</b>
+					</label>
+				</div>
+			</ion-col>
+			<ion-col class="columna">
+				<div *ngFor="let numero of numeros3" class="n1">
+					<input type="checkbox" name="" id="numero{{ numero }}" (change)="seleccionar($event, numero)">
+					<label for="numero{{ numero }}">
+						<b class="valores">
+							{{ numero }}
+						</b>
+					</label>
+				</div>
+			</ion-col>
+			<ion-col class="columna">
+				<div *ngFor="let numero of numeros4" class="n2">
+					<input type="checkbox" name="" id="numero{{ numero }}" (change)="seleccionar2($event, numero)">
+					<label for="numero{{ numero }}">
+						<b class="valores">
+							{{ numero }}
+						</b>
+					</label>
+				</div>
+			</ion-col>
+			<ion-col class="columna">
+				<div *ngFor="let numero of numeros5" class="n1">
+					<input type="checkbox" name="" id="numero{{ numero }}" (change)="seleccionar($event, numero)">
+					<label for="numero{{ numero }}">
+						<b class="valores">
+							{{ numero }}
+						</b>
+					</label>
+				</div>
+			</ion-col>
+			<!--<ion-col class="columna">
+				<div *ngFor="let numero of numeros6" class="n2">
+					<input type="checkbox" name="" id="numero{{ numero }}" (change)="seleccionar2($event, numero)">
+					<label for="numero{{ numero }}">
+						<b class="valores">
+							{{ numero }}
+						</b>
+					</label>
+				</div>
+			</ion-col>
+			<ion-col class="columna">
+				<div *ngFor="let numero of numeros7" class="n1">
+					<input type="checkbox" name="" id="numero{{ numero }}" (change)="seleccionar($event, numero)">
+					<label for="numero{{ numero }}">
+						<b class="valores">
+							{{ numero }}
+						</b>
+					</label>
+				</div>
+			</ion-col>-->
+		</ion-row>
+	</div>
+	<div *ngIf="combinacion.length < 5">
+		<ion-button shape="round" expand="full" size="large" id="verifica" (click)="validar()" disabled>VERIFICA</ion-button>
+	</div>
+	<div *ngIf="combinacion.length == 5">
+		<ion-button shape="round" expand="full" size="large" id="verifica" (click)="validar()">VERIFICA</ion-button>
+	</div>
+	<ion-row>
+		<ion-col></ion-col>
+		<ion-col>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col size="3"></ion-col>
+		<ion-col size="6">
+			<div class="semaphore">
+				<span [ngClass]="colores == 'green' ? 'green-sp' : ''"></span>
+			</div>
+			<div class="semaphore">
+				<span [ngClass]="colores == 'yellow' ? 'yellow-sp' : ''"></span>
+			</div>
+			<div class="semaphore">
+				<span [ngClass]="colores == 'red' ? 'red-sp' : ''"></span>
+			</div>
+
+			<div style="clear: both;"></div>
+		</ion-col>
+	</ion-row>
+
+	<h5 style="text-align: center; color: #fff; text-transform: uppercase;" *ngIf="colores == 'green'" >combinazione molto probabile</h5>
+	<h5 style="text-align: center; color: #fff; text-transform: uppercase;" *ngIf="colores == 'yellow'" >combinazione poco probabile</h5>
+	<h5 style="text-align: center; color: #fff; text-transform: uppercase;" *ngIf="colores == 'red'" >combinazione difficilmente probabile</h5>
+</ion-content>
+
+<ion-footer style="background-color: #771211">
+	<span style="display: block; text-align: center; color: #fff; font-weight: lighter; font-size: 14px;">
+		Per effettuare un'altra verifica <br> de-selezionare e selezionare i numeri
+	</span>
+</ion-footer>

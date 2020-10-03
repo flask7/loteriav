@@ -1,0 +1,171 @@
+#body{
+	--background: #771211;
+	--color: white;
+}
+#titulo{
+	position: relative;
+	left: -7.5%;
+	font-family: 'geometos';
+	font-size: 14px;
+}
+#tools{
+	--background: transparent;
+	--color: white;
+	text-align: center;
+	font-weight: 100;
+}
+#imgm{
+	height: 30%;
+	width: 80%;
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	z-index: 0;
+}
+#fondo{
+	margin-top: -20%;
+	height: 50%;
+	width: 100%;
+	z-index: 1;
+}
+#is{
+	height: 30%;
+	width: 80%;
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	z-index: 2;
+}
+#dona{
+	margin-top: 10%;
+	width: 75%;
+	margin-left: 12.5%;
+	--background: white;
+	--color: #771211;
+	font-weight: bolder;
+	/*--box-shadow: 0px 15px 15px #0898B5;*/
+}
+#paypal{
+	--background: transparent;
+}
+#info{
+	color: white;
+	margin: auto;
+	text-align: center;
+	font-size: 14px;
+	display: block;
+	margin-bottom: 3.5%;
+}
+#monto{
+	input {
+		outline: none !important;
+	}
+	position: relative;;
+	background: white;
+	color: #771211;
+	margin: auto;
+	font-weight: bold;
+	text-align: center;
+	width: 30% !important;
+	padding-start: 0;
+    padding-end: 0;
+    height: 40px;
+    display: flex;
+	margin-top: 24px;
+}
+#prop{
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	margin: auto;
+	font-weight: 100;
+	margin-top: -8px;
+}
+
+#million, #fondo{
+  width: 300px;
+  position: absolute;
+  z-index: 1;
+  margin: auto;
+  top: 0;
+}
+#fondo {
+  width: 90%;
+  z-index: 0;
+}
+#presentacion {
+  h2 {
+    width: 300px;
+    margin: auto;
+  }
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  background-image: url(/assets/aro-luz.png), url(/assets/monedas-2.png);
+  background-size: 300px 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+}
+@media only screen and(min-width: 350px){
+	#presentacion{
+		height: 350px;
+		width: 350px;
+		background-size: 350px 350px;
+	}
+	#million{
+		height: 350px;
+		width: 350px;
+	}
+}
+@media only screen and(min-width: 400px){
+	#presentacion{
+		height: 400px;
+		width: 400px;
+		background-size: 400px 400px;
+	}
+	#million{
+		height: 400px;
+		width: 400px;
+	}
+}
+@media only screen and(min-width: 750px){
+	#presentacion{
+		height: 550px;
+		width: 800px;
+		background-size: 550px 550px;
+	}
+	#million{
+		height: 550px;
+		width: 800px;
+	}
+	#mday{
+		font-size: 50px;
+	}
+	#chance{
+		font-size: 40px;
+	}
+	#prop{
+		font-size: 25px;
+	}
+	#info{
+		font-size: 20px;
+	}
+}
+@media only screen and(min-width: 1000px){
+	#presentacion{
+		height: 800px;
+		width: 1000px;
+		background-size: 800px 800px;
+	}
+	#million{
+		height: 800px;
+		width: 1000px;
+	}
+	#mday{
+		font-size: 60px;
+	}
+	#chance{
+		font-size: 50px;
+	}
+}

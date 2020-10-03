@@ -1,0 +1,224 @@
+.toolbar-container, #body, #tools{
+	--background: #771211;
+	--color: white;
+	font-family: 'geometos';
+	font-size: 12px;
+}
+#tools{
+	--background: transparent;
+	--box-shadow: none;
+	--color: white;
+	--border-style: transparent;
+	box-shadow: none;
+	margin-left: 1.5%;
+}
+#body{
+	--background: #771211;
+}
+#menu{
+	background: #771211;
+	color: white;
+	width: 60%;
+	height: 100%;
+	animation-name: slide;
+	animation-duration: 200ms;
+	display: none;
+	z-index: 2;
+}
+@keyframes slide{
+	from{
+		width: 0%;
+	}
+	to{
+		width: 60%;
+	}
+}
+#tools p{
+	display: block;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    left: -28px;
+    width: 100%;
+    text-align: center;
+}
+#titulo{
+	text-align: center;
+	font-family: 'geometos';
+	font-size: 14px;
+	margin: auto;
+	margin-right: 30px;
+}
+#fecha{
+	// position: absolute;
+	// top: 305px;
+	margin: 16px 0;
+	display: flex;
+	--background: transparent !important;
+}
+#date, #title{
+	margin: auto;
+	text-align: center;
+}
+#date{
+	background: white;
+	color: #771211;
+	height: 35px;
+	width: 100px;
+	display: flex;
+}
+#date p{
+	margin: auto;
+}
+#verifica{
+	--background: white;
+	--color: #771211;
+	width: 250px;
+	height: 50px;
+	margin: auto;
+	position: relative;
+	margin-bottom: 20px;
+	// top: 320px;
+}
+#datos{
+	//position: absolute;
+	bottom: 5%;
+	margin-bottom: 20px !important;
+	margin: auto;
+	width: 80%;
+	left: 10%;
+}
+[class*="numeros"]{
+	height: 40px;
+	width: 40px;
+	background-size: 40px 40px;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	b{
+		color: black;
+		text-align: center;
+		margin: auto;
+	}
+}
+.numeros1, .numeros3, .numeros5{
+	background-image: url('/assets/fondo-numero-rojo-balnco.png') !important;
+}
+.numeros2, .numeros4{
+	background-image: url('/assets/fondo-numero-azul-blanco.png') !important;
+}
+#fechas{
+	position: relative;
+	top: 380px;
+	color: white;
+	margin-left: 15%;
+	font-size: 14px;
+}
+#million, #fondo{
+  width: 300px;
+  position: absolute;
+  z-index: 1;
+  margin: auto;
+  top: 0;
+}
+#fondo {
+  width: 90%;
+  z-index: 0;
+}
+#calendario{
+	border-radius: 10px;
+	width: 95%;
+	margin: auto;
+	display: block;
+	position: relative;
+	top: -40px;
+	//left: 2.5%;
+	z-index: 100;
+	display: block;
+}
+#presentacion {
+  h2 {
+    width: 300px;
+    margin: auto;
+  }
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  background-image: url(/assets/aro-luz.png), url(/assets/monedas-2.png);
+  background-size: 300px 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+}
+@media only screen and(min-width: 350px){
+	#presentacion{
+		height: 350px;
+		width: 350px;
+		background-size: 350px 350px;
+	}
+	#million{
+		height: 350px;
+		width: 350px;
+	}
+}
+@media only screen and(min-width: 400px){
+	#presentacion{
+		height: 400px;
+		width: 400px;
+		background-size: 400px 400px;
+	}
+	#million{
+		height: 400px;
+		width: 400px;
+	}
+}
+@media only screen and(min-width: 750px){
+	#presentacion{
+		height: 550px;
+		width: 800px;
+		background-size: 550px 550px;
+	}
+	#million{
+		height: 550px;
+		width: 800px;
+	}
+	#mday{
+		font-size: 50px;
+	}
+	#chance{
+		font-size: 40px;
+	}
+}
+@media only screen and(min-height: 1000px){
+	#calendario{
+		top: 40%;
+	}
+	[class*="numeros"]{
+		height: 80px;
+		width: 80px;
+		background-size: 80px 80px;
+		b{
+			font-size: 25px;
+		}
+	}
+}
+@media only screen and(min-width: 1000px){
+	#presentacion{
+		height: 800px;
+		width: 1000px;
+		background-size: 800px 800px;
+	}
+	#million{
+		height: 800px;
+		width: 1000px;
+	}
+	#mday{
+		font-size: 60px;
+	}
+	#chance{
+		font-size: 50px;
+	}
+	#calendario{
+		top: 50%;
+	}
+}

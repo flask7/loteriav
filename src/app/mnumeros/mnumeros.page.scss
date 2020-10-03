@@ -1,0 +1,99 @@
+.toolbar-container, #body, #tools, #head{
+	--background: #771211;
+	--color: white;
+}
+#titulo{
+	font-family: 'geometos';
+	font-size: 14px;
+	text-align: center;
+	position: relative;
+	left: -7.5%;
+}
+ .n1, .n2{
+	b{
+		margin: auto;
+		color: black;
+		font-size: 12px;
+	}
+ }
+ .c1, .c2{
+	 b{
+	 	margin: auto;
+	 	color: black;
+	}
+}
+#contenedor{
+	width: 95%;
+	margin-left: 2.5%;
+	border-bottom: 1.5px solid white;
+}
+#fila{
+	margin: none;
+	height: 100%;
+	width: 80%;
+	position: relative;
+	left: 10%;
+	display: flex;
+}
+#columna{
+	height: 100%;
+	border: solid;
+}
+#verifica{
+	margin-top: 5%;
+	width: 75%;
+	margin-left: 12.5%;
+	--background: white;
+	--color: #771211;
+	font-weight: bolder;
+	/*--box-shadow: 0px 15px 15px #0898B5;*/
+}
+.n1{
+	width: 100%;
+	height: auto;
+
+	[id*="numero"]{
+		display: none;
+	}
+	[id*="numero"]+label{
+		background-image: url('/assets/fondo-numero-rojo-balnco.png');
+		text-align: center;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 35px 35px;
+		height: 50px;
+		display: flex;
+	}
+}
+.n1{
+	[id*="numero"]:checked + label{
+		background-image: url('/assets/fondo-numero-rojo-verde.png');
+	}
+}
+.n2{
+	width: 100%;
+	height: auto;
+
+	[id*="numero"]{
+		display: none;
+	}
+	[id*="numero"]+label{
+		background-image: url('/assets/fondo-numero-azul-blanco.png');
+		text-align: center;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 35px;
+		height: 50px;
+		display: flex;
+	}
+}
+.n2{
+	[id*="numero"]:checked + label{
+		background-image: url('/assets/fondo-numero-azul-verde.png');
+	}
+}
+
+ion-footer:before {
+	content: "";
+	background: none !important;
+}

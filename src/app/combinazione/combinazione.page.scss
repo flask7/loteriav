@@ -1,0 +1,212 @@
+#body{
+	--background: #771211;
+	--color: white;
+}
+#tools{
+	--background: transparent;
+	--color: white;
+	text-align: center;
+	font-weight: 100;
+}
+#titulo{
+	margin-left: -10%;
+	font-family: 'geometos';
+	font-size: 14px;
+}
+#imgm{
+	height: 30%;
+	width: 80%;
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	z-index: 0;
+}
+#fondo{
+	margin-top: -20%;
+	height: 50%;
+	width: 100%;
+	z-index: 1;
+}
+#combinacion, #columna{
+	margin: 0;
+	text-align: center;
+	height: 10%;
+}
+.n1, .n2{
+	height: 100%;
+	font-weight: bolder;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 45px 45px;
+	color: black;
+	display: flex;
+	text-align: center;
+}
+[class*="cn"]{
+	height: 100%;
+	font-weight: bolder;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 30px 30px;
+	color: black;
+	display: flex;
+	text-align: center;
+	margin: 5px;
+	font-size: 12px;
+	height: 32px;
+}
+.n1, .cn1, .cn3, .cn5{
+	background-image: url('/assets/fondo-numero-rojo-balnco.png');
+}
+.n2, .cn2, .cn4{
+	background-image: url('/assets/fondo-numero-azul-blanco.png');
+}
+.n1, .n2, [class*="c"]{
+	label, b{
+		margin: auto;
+		text-align: center;
+		display: flex;
+	}
+}
+#modifica{
+	width: 260px;
+	height: 45px;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	--background: white;
+	color: #771211;
+	font-weight: bold;
+	font-size: 14px;
+	/*--box-shadow: 0px 10px 10px #0898B5;*/
+}
+#content{
+	margin: auto;
+	display: flex;
+}
+#hoy{
+	text-align: center;
+	margin: auto;
+	position: relative;
+	top: -50%;
+	font-family: 'geometos';
+	font-size: 14px;
+}
+p{
+	text-align: right;
+	width: 100%;
+}
+#uc{
+	display: block;
+	text-align: center;
+	margin: auto;
+}
+#combo{
+	font-family: 'geometos';
+	font-size: 14px;
+	text-align: left;
+	margin-left: 2.5%;
+}
+
+#million, #fondo{
+  width: 300px;
+  position: absolute;
+  z-index: 1;
+  margin: auto;
+  top: 0;
+}
+#fondo {
+  width: 90%;
+  z-index: 0;
+}
+#presentacion {
+  h2 {
+    width: 300px;
+    margin: auto;
+  }
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  background-image: url(/assets/aro-luz.png), url(/assets/monedas-2.png);
+  background-size: 300px 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+}
+@media only screen and(min-width: 350px){
+	#presentacion{
+		height: 350px;
+		width: 350px;
+		background-size: 350px 350px;
+	}
+	#million{
+		height: 350px;
+		width: 350px;
+	}
+}
+@media only screen and(min-width: 400px){
+	#presentacion{
+		height: 400px;
+		width: 400px;
+		background-size: 400px 400px;
+	}
+	#million{
+		height: 400px;
+		width: 400px;
+	}
+}
+@media only screen and(min-width: 750px){
+	#presentacion{
+		height: 550px;
+		width: 800px;
+		background-size: 550px 550px;
+	}
+	#million{
+		height: 550px;
+		width: 800px;
+	}
+	#mday{
+		font-size: 50px;
+	}
+	#chance{
+		font-size: 40px;
+	}
+	#hoy{
+		font-size: 40px;
+	}
+	.n1, .n2{
+		background-size: 80px 80px;
+		font-size: 30px;
+	}
+	[class*="cn"]{
+		background-size: 65px 65px;
+		margin: 5px;
+		font-size: 20px;
+		height: 67px;
+	}
+	#fechau, #combo{
+		font-size: 20px !important;
+	}
+	#modifica{
+		height: 80px;
+		width: 500px;
+		font-size: 30px;
+	}
+}
+@media only screen and(min-width: 1000px){
+	#presentacion{
+		height: 800px;
+		width: 1000px;
+		background-size: 800px 800px;
+	}
+	#million{
+		height: 800px;
+		width: 1000px;
+	}
+	#mday{
+		font-size: 60px;
+	}
+	#chance{
+		font-size: 50px;
+	}
+}

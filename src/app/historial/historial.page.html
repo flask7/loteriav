@@ -1,0 +1,80 @@
+<ion-content id="body">
+	<ion-toolbar id="head">
+		<ion-menu-button menu="main-menu" slot="start" color="light" color="white"></ion-menu-button>
+		<ion-title id="ue">
+			ULTIME ESTRAZIONI
+		</ion-title>
+	</ion-toolbar>
+	<ion-row id="uc">
+		<ion-col>
+			<b id="ucc">ULTIMO CONCORSO</b>
+		</ion-col>
+	</ion-row>
+	<div class="datos" style="width: 80%;">
+		<div *ngFor="let ultime of numeros[0]; let i = index">
+			<div [id]="'ultime'+i">
+				<b>{{ ultime }}</b>
+			</div>
+		</div>
+	</div>
+	<ion-row id="uc">
+		<ion-col>
+			<b id="ucp">VINCITE</b>
+		</ion-col>
+		<ion-col>
+			<b id="ucp">CATEGORIE</b>
+		</ion-col>
+		<ion-col>
+			<b id="ucp">EURO</b>
+		</ion-col>
+	</ion-row>
+	<ion-item id="resultados" lines="none">
+		<table id="vincite">
+			<tr id="v" *ngFor="let g of ganadores; let i = index">
+				<td>{{ g.numero }}</td>
+				<td>Punti {{ 5- i }}</td>
+				<td>{{ g.quota.importo }}</td>
+			</tr>
+		</table>
+	</ion-item>
+	<ion-row id="uc">
+		<ion-col>
+			<b id="ucc">ULTIME 7 ESTRAZIONI</b>
+		</ion-col>
+	</ion-row>
+	<div id="estrazioni" id="number" *ngFor="let d of dias; let i = index">
+		<ion-row id="fecha">
+			<p>ESTRAZIONE <!-- {{ d }} --> <span style="float: right;">{{ fechas[i] | fechas }}</span></p>
+		</ion-row>
+		<ion-row id="dia">
+			<ion-col>
+				<b [ngClass]="(fechas[i] | fechas:'dia') == 1 ? 'green' : '' ">LUN</b>
+			</ion-col>
+			<ion-col>
+				<b [ngClass]="(fechas[i] | fechas:'dia') == 2 ? 'green' : '' ">MAR</b>
+			</ion-col>
+			<ion-col>
+				<b [ngClass]="(fechas[i] | fechas:'dia') == 3 ? 'green' : '' ">MER</b>
+			</ion-col>
+			<ion-col>
+				<b [ngClass]="(fechas[i] | fechas:'dia') == 4 ? 'green' : '' ">GIO</b>
+			</ion-col>
+			<ion-col>
+				<b [ngClass]="(fechas[i] | fechas:'dia') == 5 ? 'green' : '' ">VEN</b>
+			</ion-col>
+			<ion-col>
+				<b [ngClass]="(fechas[i] | fechas:'dia') == 6 ? 'green' : '' ">SAB</b>
+			</ion-col>
+			<ion-col>
+				<b [ngClass]="(fechas[i] | fechas:'dia') == 0 ? 'green' : '' ">DOM</b>
+			</ion-col>
+		</ion-row>
+		<div class="datos">
+			<ion-row id="tab">
+				<ion-col id="ultime{{ x }}" *ngFor="let n of numeros[i]; let x = index">
+					<b>{{ n }}</b>
+				</ion-col>
+			</ion-row>
+		</div>
+	</div>
+</ion-content>

@@ -1,0 +1,50 @@
+<ion-content id="body">
+	<ion-toolbar id="tools">
+		<ion-buttons slot="start">
+			<ion-menu-button menu="main-menu" slot="start"></ion-menu-button>
+    	</ion-buttons>
+    	<ion-title id="titulo">NUMERI PIÙ FREQUENTI</ion-title>
+    </ion-toolbar>
+    <div (click)="ordenar()" id="orden">
+    	<span>{{order}}</span>
+    </div>
+	<div id="contenedor">
+		<ion-row class="numeros">
+			<ion-col size="6" class="numero1" *ngFor="let numero of numeros; let i = index">
+				<div class="interior">
+					<div class="c1">
+						<label>{{ numero.num }}</label>
+					</div>
+					<p>E'uscito per <br> {{ numero.freq }} Estrazioni</p>
+				</div>
+			</ion-col>
+			<!-- <ion-col class="numero2" *ngIf="numeros2[i]">
+				<div class="c2">
+					<label>{{ numeros2[i].num }}</label>
+				</div>
+				<p>E'uscito per <br> {{ numeros2[i].freq }} Estrazioni</p>
+			</ion-col> -->
+		</ion-row>
+	</div>
+</ion-content>
+<ion-footer>
+	<ion-tabs id="menufoot">
+	  <ion-tab-bar slot="bottom">
+	    <ion-tab-button routerLink="/frequenti" id="mb1">
+	      <!-- <ion-icon name="home"></ion-icon> -->
+	      <img src="../assets/piu-frecuenti.png" alt="" style="width: 24px;">
+	      <ion-label style="margin-top: 6px; border-bottom: 2px solid gold">PIÜ FREQUENTI</ion-label>
+	    </ion-tab-button>
+
+	    <ion-tab-button routerLink="/retardati" id="mb2">
+	      <ion-icon src="../assets/bingo.svg"></ion-icon>
+	      <ion-label style="margin-top: 6px;">NUMERI RITARDATARI</ion-label>
+	    </ion-tab-button>
+
+	    <ion-tab-button routerLink="/estadisticas" id="mb3">
+	      <ion-icon src="../assets/statistics.svg"></ion-icon>
+	      <ion-label style="margin-top: 6px;">ANALISI PRESENZE</ion-label>
+	    </ion-tab-button>
+	  </ion-tab-bar>
+	</ion-tabs>
+</ion-footer>

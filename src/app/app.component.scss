@@ -1,0 +1,92 @@
+#menu, .items, #lista, #header, #tools, #menup, #main{
+	--background: #771211;
+	margin: 0;
+	--border: none;
+}
+.items .label{
+	--color: #FFF100;
+	-webkit-text-stroke: 1px black;
+	font-weight: bolder;
+	margin-bottom: 2.5%;
+}
+#profile{
+	margin-top: 15%;
+	height: 70px;
+	width: 70px;
+}
+#salir{
+	--color: white;
+	width: 100%;
+	margin: auto;
+}
+.label{
+	padding: 0 0 0 5%;
+}
+#lista{
+	background: transparent;
+}
+#usuario{
+	color: white;
+}
+@font-face{
+	font-family: 'digital-7';
+	src: url('/assets/digital-7.ttf');
+}
+@font-face{
+	font-family: 'Roboto';
+	font-weight: 100;
+	src: url('/assets/Roboto-Black.ttf');
+}
+@font-face{
+	font-family: 'geometos';
+	font-weight: 100;
+	src: url('/assets/Geometos.ttf');
+}
+@font-face{
+	font-family: 'sf ui display';
+	font-weight: 100;
+	src: url('/assets/sf-ui-display-bold.woff');
+}
+@font-face{
+	font-family: 'Hitchhiker';
+	font-weight: 100;
+	src: url('/assets/Hitchhiker.ttf');
+}
+
+ion-footer {
+	&:before {
+		background: none !important;
+	}
+}
+/*@media only screen and(min-height: 560px){
+	#profile{
+		height: 90%;
+		width: 50%;
+	}
+}
+@media only screen and(min-height: 640px){
+	#profile{
+		height: 90%;
+		width: 50%;
+	}
+}
+@media only screen and(min-height: 650px){
+	#profile{
+		height: 90%;
+		width: 50%;
+	}
+}
+@media only screen and(min-height: 720px){
+	#profile{
+		margin-top: 10%;
+		height: 80%;
+		width: 50%;
+	}
+}
+@media only screen and(min-height: 800px){
+	#profile{
+		margin-top: 10%;
+		height: 80%;
+		width: 50%;
+	}
+}*/

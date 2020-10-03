@@ -1,0 +1,101 @@
+<ion-content id="body">
+	<ion-header id="head">
+	  <ion-toolbar id="tools">
+	  	<ion-menu-button menu="main-menu" slot="start"></ion-menu-button>
+	  	<ion-title id="titulo">SELEZIONA IL SISTEMA</ion-title>
+	  </ion-toolbar>
+	</ion-header>
+	<p id="exclusion">
+		Scegli massimo DUE numeri che DEVONO essere presenti nella combinazione. Altrimenti CONTINUA.
+	</p>
+	<div id="contenedor">
+		<ion-row id="fila">
+			<ion-col class="columna">
+				<div *ngFor="let numero of numeros" class="n1">
+					<input type="checkbox" name="" id="numero{{ numero }}" [checked]="numero | verificar: combinacion" (change)="seleccionar($event, numero)">
+					<label for="numero{{ numero }}">
+						<b class="valores">
+							{{ numero }}
+						</b>
+					</label>
+				</div>
+			</ion-col>
+			<ion-col class="columna">
+				<div *ngFor="let numero of numeros2" class="n2">
+					<input type="checkbox" name="" id="numero{{ numero }}" [checked]="numero | verificar: combinacion" (change)="seleccionar2($event, numero)">
+					<label for="numero{{ numero }}">
+						<b class="valores">
+							{{ numero }}
+						</b>
+					</label>
+				</div>
+			</ion-col>
+			<ion-col class="columna">
+				<div *ngFor="let numero of numeros3" class="n1">
+					<input type="checkbox" name="" id="numero{{ numero }}" [checked]="numero | verificar: combinacion" (change)="seleccionar($event, numero)">
+					<label for="numero{{ numero }}">
+						<b class="valores">
+							{{ numero }}
+						</b>
+					</label>
+				</div>
+			</ion-col>
+			<ion-col class="columna">
+				<div *ngFor="let numero of numeros4" class="n2">
+					<input type="checkbox" name="" id="numero{{ numero }}" [checked]="numero | verificar: combinacion" (change)="seleccionar2($event, numero)">
+					<label for="numero{{ numero }}">
+						<b class="valores">
+							{{ numero }}
+						</b>
+					</label>
+				</div>
+			</ion-col>
+			<ion-col class="columna">
+				<div *ngFor="let numero of numeros5" class="n1">
+					<input type="checkbox" name="" id="numero{{ numero }}" [checked]="numero | verificar: combinacion" (change)="seleccionar($event, numero)">
+					<label for="numero{{ numero }}">
+						<b class="valores">
+							{{ numero }}
+						</b>
+					</label>
+				</div>
+			</ion-col>
+			<!--<ion-col class="columna">
+				<div *ngFor="let numero of numeros6" class="n2">
+					<input type="checkbox" name="" id="numero{{ numero }}" [checked]="numero | verificar: combinacion" (change)="seleccionar2($event, numero)">
+					<label for="numero{{ numero }}">
+						<b class="valores">
+							{{ numero }}
+						</b>
+					</label>
+				</div>
+			</ion-col>
+			<ion-col class="columna">
+				<div *ngFor="let numero of numeros7" class="n1">
+					<input type="checkbox" name="" id="numero{{ numero }}" [checked]="numero | verificar: combinacion" (change)="seleccionar($event, numero)">
+					<label for="numero{{ numero }}">
+						<b class="valores">
+							{{ numero }}
+						</b>
+					</label>
+				</div>
+			</ion-col>-->
+		</ion-row>
+	</div>
+	<ion-row *ngIf="combinacion.length >= 1" id="seleccionado">
+		<ion-col *ngIf="combinacion[0]" class="c1">
+			<b>{{ combinazione[0] }}</b>
+		</ion-col>
+		<ion-col *ngIf="combinacion[1]" class="c2">
+			<b>{{ combinazione[1] }}</b>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col>
+			<ion-button shape="round" id="verifica" (click)="espalda()">RICOMINCIA</ion-button>
+		</ion-col>
+		<ion-col>
+			<ion-button shape="round" id="verifica" (click)="guardar()">SALVA</ion-button>
+		</ion-col>
+	</ion-row>
+</ion-content>

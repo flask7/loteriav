@@ -1,0 +1,121 @@
+<ion-content id="body">
+  <ion-toolbar id="tools">
+  	<ion-buttons slot="start">
+      <ion-menu-button menu="main-menu" slot="start"></ion-menu-button>
+    </ion-buttons>
+    <ion-title id="titulo">VERIFICA SCHEDINA</ion-title>
+  </ion-toolbar>
+  <div id="contenedor">
+		<ion-row id="fila">
+			<ion-col class="columna">
+				<div *ngFor="let numero of numeros" class="n1">
+					<input type="checkbox" name="" id="numero{{ numero }}" (change)="seleccionar($event, numero)">
+					<label for="numero{{ numero }}">
+						<b class="valores">
+							{{ numero }}
+						</b>
+					</label>
+				</div>
+			</ion-col>
+			<ion-col class="columna">
+				<div *ngFor="let numero of numeros2" class="n2">
+					<input type="checkbox" name="" id="numero{{ numero }}" (change)="seleccionar2($event, numero)">
+					<label for="numero{{ numero }}">
+						<b class="valores">
+							{{ numero }}
+						</b>
+					</label>
+				</div>
+			</ion-col>
+			<ion-col class="columna">
+				<div *ngFor="let numero of numeros3" class="n1">
+					<input type="checkbox" name="" id="numero{{ numero }}" (change)="seleccionar($event, numero)">
+					<label for="numero{{ numero }}">
+						<b class="valores">
+							{{ numero }}
+						</b>
+					</label>
+				</div>
+			</ion-col>
+			<ion-col class="columna">
+				<div *ngFor="let numero of numeros4" class="n2">
+					<input type="checkbox" name="" id="numero{{ numero }}" (change)="seleccionar2($event, numero)">
+					<label for="numero{{ numero }}">
+						<b class="valores">
+							{{ numero }}
+						</b>
+					</label>
+				</div>
+			</ion-col>
+			<ion-col class="columna">
+				<div *ngFor="let numero of numeros5" class="n1">
+					<input type="checkbox" name="" id="numero{{ numero }}" (change)="seleccionar($event, numero)">
+					<label for="numero{{ numero }}">
+						<b class="valores">
+							{{ numero }}
+						</b>
+					</label>
+				</div>
+			</ion-col>
+			<!--<ion-col class="columna">
+				<div *ngFor="let numero of numeros6" class="n2">
+					<input type="checkbox" name="" id="numero{{ numero }}" (change)="seleccionar2($event, numero)">
+					<label for="numero{{ numero }}">
+						<b class="valores">
+							{{ numero }}
+						</b>
+					</label>
+				</div>
+			</ion-col>
+			<ion-col class="columna">
+				<div *ngFor="let numero of numeros7" class="n1">
+					<input type="checkbox" name="" id="numero{{ numero }}" (change)="seleccionar($event, numero)">
+					<label for="numero{{ numero }}">
+						<b class="valores">
+							{{ numero }}
+						</b>
+					</label>
+				</div>
+			</ion-col>-->
+		</ion-row>
+	</div>
+	<div>
+		<ion-button shape="round" expand="full" size="large" id="verificar" [disabled]="combinacion.length != 5" (click)="verificar()">VERIFICA</ion-button>
+	</div>
+	<div id="estrazioni" id="number" *ngFor="let d of dias; let i = index">
+		<ion-row id="fecha">
+			<p>ESTRAZIONE <span style="float: right;">{{ fechas[i] | fechas }}</span></p>
+		</ion-row>
+		<ion-row id="dia">
+			<ion-col>
+				<b [ngClass]="(fechas[i] | fechas:'dia') == 0 ? 'green' : '' ">LUN</b>
+			</ion-col>
+			<ion-col>
+				<b [ngClass]="(fechas[i] | fechas:'dia') == 1 ? 'green' : '' ">MAR</b>
+			</ion-col>
+			<ion-col>
+				<b [ngClass]="(fechas[i] | fechas:'dia') == 2 ? 'green' : '' ">MER</b>
+			</ion-col>
+			<ion-col>
+				<b [ngClass]="(fechas[i] | fechas:'dia') == 3 ? 'green' : '' ">GIO</b>
+			</ion-col>
+			<ion-col>
+				<b [ngClass]="(fechas[i] | fechas:'dia') == 4 ? 'green' : '' ">VEN</b>
+			</ion-col>
+			<ion-col>
+				<b [ngClass]="(fechas[i] | fechas:'dia') == 5 ? 'green' : '' ">SAB</b>
+			</ion-col>
+			<ion-col>
+				<b [ngClass]="(fechas[i] | fechas:'dia') == 6 ? 'green' : '' ">DOM</b>
+			</ion-col>
+		</ion-row>
+		<div class="datos">
+			<ion-row id="tab">
+				<ion-col [ngClass]="(n | verificar:combinacion) ? 'verde' : '' " id="ultime{{ x }}" *ngFor="let n of numerosx[i]; let x = index">
+				<!--<ion-col [ngClass]="combinacion.length > 0; then n | verificar:combinacion ? 'verde' : '' " id="ultime{{ x }}" *ngFor="let n of numerosx[i]; let x = index">-->
+					<b>{{ n }}</b>
+				</ion-col>
+			</ion-row>
+		</div>
+	</div>
+</ion-content>

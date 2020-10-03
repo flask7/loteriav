@@ -1,0 +1,55 @@
+<ion-content id="body" #content>
+    <!-- <ion-toolbar id="tools">
+        <ion-buttons slot="start">
+            <ion-menu-button menu="main-menu" slot="start"></ion-menu-button>
+        </ion-buttons>
+        <ion-title id="titulo">VERIFICA SCHEDINA</ion-title>
+    </ion-toolbar>
+    <img src="../assets/icono superior.png" id="million">
+    <img src="../assets/monedas-2.png" id="fondo"> -->
+
+    <div id="presentacion">
+      <ion-toolbar id="tools">
+        <ion-menu-button menu="main-menu" slot="start"></ion-menu-button>
+        <p id="VINCICASA">CHANCE VINCICASA</p>
+      </ion-toolbar>
+      <img src="../assets/icono superior.png" id="million">
+     <!-- <img src="../assets/monedas-2.png" id="fondo">-->
+    </div>
+
+    <!--<ion-row>
+        <ion-col id="fecha">
+            <p id="title">SELEZIONA LA DATA</p>
+            <ion-datetime class="ion-no-padding ion-no-margion" style="padding: 10px 16px" displayFormat="DD MMM YYYY" display-timezone="utc"
+                monthShortNames="gen, feb, mar, apr, mai, jun, lug, aug, set, ott, nov, dec"
+                placeholder="DATA"
+                cancel-text="Chiudi"
+                done-text="Ok"
+                id="date"
+                [(ngModel)]="fecha" name="fecha">
+            </ion-datetime>
+        </ion-col>
+    </ion-row>
+    <ion-button size="large" expand="full" shape="round" id="verifica" (click)="verifica()">VERIFICA</ion-button>-->
+   <!-- <ion-row id="fecha">
+        <ion-col id="fecha">
+            <p id="title">SELEZIONA LA DATA</p>
+            <div id="date" (click)="mostrar()">
+                <p>DATA</p>
+            </div>
+        </ion-col>
+    </ion-row>-->
+    <ion-calendar [(ngModel)]="fecha"
+      name="fecha"
+      [options]="optionsRange"
+      (click)="verifica($event)"
+      [type]="type"
+      [format]="'DD MMM YYYY'"
+      id="calendario">
+    </ion-calendar>
+    <ion-row id="datos">
+        <ion-col *ngFor="let schedina of numeros; let x = index" [ngClass]="'numeros' + (x + 1)" disable="fecha.length > 0">
+            <b>{{ schedina }}</b>
+        </ion-col>
+    </ion-row>
+</ion-content>
